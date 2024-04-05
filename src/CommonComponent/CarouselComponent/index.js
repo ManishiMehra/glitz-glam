@@ -14,14 +14,14 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
+    label: "American Diamond Sets",
     imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://images.unsplash.com/photo-1588444968576-f8fe92ce56fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRpYW1vbmQlMjBuZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
-    label: "Bird",
+    label: "Kundan Necklace Sets",
     imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://media.istockphoto.com/id/982488252/photo/pearl-kundan-jewelry-neck-set-with-earrings-closeup-macro-image-with-black-background.webp?b=1&s=170667a&w=0&k=20&c=SYhcWUX7NIkjOrZ3MaBDZE6mmB1ecyEjl7APU-p0LJg=",
   },
   {
     label: "Bali, Indonesia",
@@ -80,7 +80,7 @@ const CarouselComponent = () => {
                 component="img"
                 sx={{
                   height: 255,
-                  display: "block",
+                  display: "fit",
                   overflow: "hidden",
                   width: "100%",
                 }}

@@ -4,6 +4,7 @@ import { Grid, Container } from "@mui/material";
 import CarouselComponent from "../../CommonComponent/CarouselComponent";
 import MultiCardComponent from "../../CommonComponent/MultiCardComponent";
 import SingleCardComponent from "../../CommonComponent/SingleCard";
+import PaperComponent from "../../CommonComponent/PaperComponent";
 
 const ProductsList = () => {
   return (
@@ -23,7 +24,19 @@ const ProductsList = () => {
       </Container>
       <CarouselComponent />
       <MultiCardComponent />
-      <SingleCardComponent />
+      <Container>
+        <Grid container spacing={2}>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <PaperComponent />
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+        </Grid>
+      </Container>
     </>
     // <div>
     //   <CardComponent />

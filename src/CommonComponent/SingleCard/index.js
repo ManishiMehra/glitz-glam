@@ -5,9 +5,9 @@ import Necklace from "../../Assests/necklace.jpg";
 
 const SingleCardComponent = () => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 600, margin: "10px" }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 300 }}
         image={Necklace}
         title="Title of the Image"
       />
