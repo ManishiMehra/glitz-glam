@@ -14,22 +14,22 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: "American Diamond Sets",
+    label: "Diamond Sets",
     imgPath:
       "https://images.unsplash.com/photo-1588444968576-f8fe92ce56fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRpYW1vbmQlMjBuZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
-    label: "Kundan Necklace Sets",
+    label: "Gold Necklace Sets",
     imgPath:
       "https://media.istockphoto.com/id/982488252/photo/pearl-kundan-jewelry-neck-set-with-earrings-closeup-macro-image-with-black-background.webp?b=1&s=170667a&w=0&k=20&c=SYhcWUX7NIkjOrZ3MaBDZE6mmB1ecyEjl7APU-p0LJg=",
   },
   {
-    label: "Bali, Indonesia",
+    label: "Gold Bracelets and Bangles",
     imgPath:
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
   },
   {
-    label: "Goč, Serbia",
+    label: "Silver Jewellery",
     imgPath:
       "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
   },
