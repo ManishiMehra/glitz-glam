@@ -6,6 +6,7 @@ import MultiCardComponent from "../../CommonComponent/MultiCardComponent";
 import SingleCardComponent from "../../CommonComponent/SingleCard";
 import PaperComponent from "../../CommonComponent/PaperComponent";
 import VideoCardComponent from "../../CommonComponent/VideoCardComponent";
+import MultipleCardsComponent from "../../CommonComponent/MultipleCardsComponent";
 
 const ProductsList = () => {
   return (
@@ -38,8 +39,8 @@ const ProductsList = () => {
           </Grid>
         </Grid>
       </Container>
-
       <VideoCardComponent />
+      <MultipleCardsComponent />
     </>
     // <div>
     //   <CardComponent />
