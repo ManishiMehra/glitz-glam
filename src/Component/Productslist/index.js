@@ -39,8 +39,58 @@ const ProductsList = () => {
           </Grid>
         </Grid>
       </Container>
-      <VideoCardComponent />
       <MultipleCardsComponent />
+      <MultipleCardsComponent />
+      <Container>
+        <Grid spacing={2}>
+          <Grid item xs={6} md={6}>
+            <VideoCardComponent />
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <PaperComponent />
+          </Grid>
+        </Grid>
+      </Container>
+
+      <MultipleCardsComponent />
+      <Container>
+        <Grid container spacing={2}>
+          <Grid item xs={6} md={6}>
+            <SingleCardComponent />
+          </Grid>
+          <Grid item xs={6} md={6}>
+            <PaperComponent />
+          </Grid>
+        </Grid>
+      </Container>
+      <Container>
+        <Grid container spacing={2}>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+        </Grid>
+      </Container>
+      <CarouselComponent />
+
+      <Container>
+        <Grid container spacing={2}>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+          <Grid item xs={4} md={4}>
+            <SingleCardComponent />
+          </Grid>
+        </Grid>
+      </Container>
     </>
     // <div>
     //   <CardComponent />
