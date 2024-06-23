@@ -1,21 +1,20 @@
+import { Grid } from "@mui/material";
 import React from "react";
-import JewelleryVideo from "../../Assests/Jewellery Video.mp4";
+import JewelleryVideo from "../../Assests/JewelleryVideo.mp4";
+import PaperComponent from "../PaperComponent";
 
 const VideoCardComponent = () => {
   return (
-    <div className="video-container">
-      <video
-        controls
-        sx={{
-          width: "300px",
-          height: "auto",
-          float: "left",
-          marginRight: "20px",
-        }}
-      >
-        <source src={JewelleryVideo} />
-      </video>
-    </div>
+    <Grid container spacing={2} sx={{ margin: 5 }}>
+      <Grid item xs={6} md={6}>
+        <video style={{ width: "700px" }} controls autoPlay muted>
+          <source src={JewelleryVideo} />
+        </video>
+      </Grid>
+      <Grid item xs={4} md={4}>
+        <PaperComponent />
+      </Grid>
+    </Grid>
   );
 };
 

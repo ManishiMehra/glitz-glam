@@ -8,8 +8,8 @@ const PaperComponent = () => {
       sx={{
         textalign: "center",
         color: "black",
-        height: 90,
-        lineHeight: "60px",
+        height: 100,
+        lineHeight: "30px",
       }}
     >
       <Box

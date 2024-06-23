@@ -1,21 +1,27 @@
 //import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import Header from "./Component/Header";
 import ProductsList from "./Component/Productslist";
 import Footer from "./Component/Footer";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Component/Home";
+import Cart from "./Component/Cart";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <div style={{ marginTop: 80 }}>
-        <ProductsList />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductsList />} />
+        <Route path="/cart" element={<Cart />} />
+        {/* <Route path='/contact' element={<Contact/>} /> */}
+      </Routes>
       <Button variant="contained">Click Me</Button>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -16,6 +16,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useNavigate } from "react-router-dom";
+import { DataContext } from "../../DataProvider";
 
 // const Search = styled('div')(({ theme }) => ({
 //   position: 'relative',
@@ -60,10 +62,21 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [cartCount, setCartCount] = React.useState(0);
+  const { data, updateData } = React.useContext(DataContext);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const navigate = useNavigate();
 
+  // React.useEffect(() => {
+  //   // Retrieve the array from localStorage when the component mounts
+  //   const storedItems = localStorage.getItem("cartProducts");
+  //   if (storedItems) {
+  //     setCartCount(JSON.parse(storedItems).length);
+  //   }
+  // }, []);
+  console.log("data", data);
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -122,7 +135,7 @@ const Header = () => {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={cartCount?.length} color="error">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -155,8 +168,11 @@ const Header = () => {
     </Menu>
   );
 
+  const rediectHome = (routeVal) => {
+    navigate(routeVal);
+  };
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, marginBottom: 10 }}>
       <AppBar
         position="fixed"
         sx={{ backgroundColor: "#15333d", color: "#f4e9e0" }}
@@ -166,7 +182,8 @@ const Header = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
+            onClick={() => rediectHome("/")}
           >
             Glitz & Glam
           </Typography>
@@ -179,14 +196,25 @@ const Header = () => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search> */}
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 1 }}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
+              onClick={() => rediectHome("/products")}
+            >
+              Products
+            </Typography>
+          </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
+              onClick={() => rediectHome("/cart")}
             >
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={data?.length} color="error">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>

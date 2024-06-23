@@ -1,33 +1,19 @@
 import React from "react";
-import CardComponent from "../../CommonComponent/Card";
 import { Grid, Container } from "@mui/material";
 import CarouselComponent from "../../CommonComponent/CarouselComponent";
 import MultiCardComponent from "../../CommonComponent/MultiCardComponent";
 import SingleCardComponent from "../../CommonComponent/SingleCard";
 import PaperComponent from "../../CommonComponent/PaperComponent";
-import VideoCardComponent from "../../CommonComponent/VideoCardComponent";
 import MultipleCardsComponent from "../../CommonComponent/MultipleCardsComponent";
+import { products } from "./constant";
 
 const ProductsList = () => {
   return (
     <>
-      <Container maxWidth="lg">
-        <Grid container spacing={2}>
-          <Grid item xs={4} md={4}>
-            <CardComponent />
-          </Grid>
-          <Grid item xs={4} md={4}>
-            <CardComponent />
-          </Grid>
-          <Grid item xs={4} md={4}>
-            <CardComponent />
-          </Grid>
-        </Grid>
-      </Container>
-      <CarouselComponent />
-      <MultiCardComponent />
-      <Container>
-        <Grid container spacing={2}>
+      <Container maxWidth="x-lg" sx={{ marginTop: 10 }}>
+        <MultiCardComponent list={products.list1} />
+
+        <Grid container spacing={2} marginBottom={2}>
           <Grid item xs={4} md={4}>
             <SingleCardComponent />
           </Grid>
@@ -38,22 +24,14 @@ const ProductsList = () => {
             <SingleCardComponent />
           </Grid>
         </Grid>
-      </Container>
-      <MultipleCardsComponent />
-      <MultipleCardsComponent />
-      <Container>
         <Grid spacing={2}>
-          <Grid item xs={6} md={6}>
-            <VideoCardComponent />
-          </Grid>
-          <Grid item xs={6} md={6}>
-            <PaperComponent />
+          <Grid item xs={4} md={4} marginBottom={2}>
+            <MultipleCardsComponent list={products?.list2} />
           </Grid>
         </Grid>
-      </Container>
 
-      <MultipleCardsComponent />
-      <Container>
+        {/* <MultiCardComponent list={products.list3} /> */}
+
         <Grid container spacing={2}>
           <Grid item xs={6} md={6}>
             <SingleCardComponent />
@@ -62,8 +40,7 @@ const ProductsList = () => {
             <PaperComponent />
           </Grid>
         </Grid>
-      </Container>
-      <Container>
+
         <Grid container spacing={2}>
           <Grid item xs={4} md={4}>
             <SingleCardComponent />
@@ -75,10 +52,9 @@ const ProductsList = () => {
             <SingleCardComponent />
           </Grid>
         </Grid>
-      </Container>
-      <CarouselComponent />
 
-      <Container>
+        <CarouselComponent />
+
         <Grid container spacing={2}>
           <Grid item xs={4} md={4}>
             <SingleCardComponent />
@@ -92,9 +68,6 @@ const ProductsList = () => {
         </Grid>
       </Container>
     </>
-    // <div>
-    //   <CardComponent />
-    // </div>
   );
 };
 

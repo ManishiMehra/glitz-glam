@@ -26,12 +26,12 @@ const images = [
   {
     label: "Gold Bracelets and Bangles",
     imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
+      "https://www.joyalukkas.in/media/catalog/product/d/s/ds1700035907_10.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
   },
   {
     label: "Silver Jewellery",
     imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://images.cltstatic.com/media/product/350/AT00169-SS0100-oxidised-owning-my-clumsy-nature-bracelet-prd-3-pd.jpg",
   },
 ];
 
@@ -53,14 +53,14 @@ const CarouselComponent = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, marginTop: 10 }}>
       <Paper
         square
         elevation={0}
         sx={{
           display: "flex",
           alignItems: "center",
-          height: 50,
+          height: 60,
           pl: 2,
           bgcolor: "background.default",
         }}
@@ -79,7 +79,7 @@ const CarouselComponent = () => {
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  height: 500,
                   display: "fit",
                   overflow: "hidden",
                   width: "100%",
